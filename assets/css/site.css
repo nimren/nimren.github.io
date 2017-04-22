@@ -2,7 +2,10 @@ body{
     font-family: 'Muli', sans-serif;
     color: #2d2d2d
 }
-footer{
+main{
+  min-height: 1036px;
+}
+.footer{
     padding: 25px;
     color: white;
     background-color: #2d2d2d;
