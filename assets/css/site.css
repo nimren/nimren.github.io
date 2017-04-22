@@ -1,0 +1,68 @@
+body{
+    font-family: 'Muli', sans-serif;
+    color: #2d2d2d
+}
+footer{
+    padding: 25px;
+    color: white;
+    background-color: #2d2d2d;
+}
+
+footer a{
+    color: #b4b50f;
+}
+
+footer a:hover{
+    color: #d4da22;
+}
+
+/*
+Features and service icon boxes
+*/
+.features-section {
+  padding-top: 90px;
+  padding-bottom: 60px; }
+
+.feature-box-center i {
+  font-size: 50px;
+  margin-bottom: 15px;
+  color: #b4b50f;
+  display: block; }
+
+.features-bg {
+  background: url(../images/bg2.jpg) no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding-top: 90px;
+  padding-bottom: 50px; }
+  .features-bg .center-title h2, .features-bg .center-title p {
+    color: #fff; }
+  .features-bg .center-title:after {
+    background: #fff; }
+
+.feature-icon-left {
+  margin-bottom: 40px; }
+  .feature-icon-left .icon {
+    float: left;
+    margin-right: 20px;
+    color: #fff;
+    width: 60px;
+    text-align: center;
+    font-size: 50px; }
+  .feature-icon-left .content {
+    overflow: hidden; }
+    .feature-icon-left .content h4, .feature-icon-left .content p {
+      color: #fff; }
+    .feature-icon-left .content h4 {
+      font-weight: 400;
+      text-transform: capitalize; }
+    .feature-icon-left .content p {
+      opacity: 0.9; }      
+
+
+.center-title {
+    margin: 50px 0;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+}
