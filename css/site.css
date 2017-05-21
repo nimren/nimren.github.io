@@ -405,7 +405,7 @@ ul.social-buttons li a:active {
   border: none;
   min-height: 100%;
   padding: 100px 0;
-  text-align: center;
+  text-align: left;
 }
 .portfolio-modal .modal-content h2 {
   margin-bottom: 15px;
@@ -482,4 +482,14 @@ img::-moz-selection {
 }
 body {
   webkit-tap-highlight-color: #b4b50f;
+}
+@media (min-width: 768px) {
+  .preambleComponent--white p:last-child:after {
+    content: "";
+    width: 10%;
+    border-bottom: 3px solid #b4b50f;
+    padding-bottom: 50px;
+    display: block;
+    margin: 0 auto;
+  }
 }

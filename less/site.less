@@ -372,7 +372,7 @@ ul.social-buttons {
         border: none;
         min-height: 100%;
         padding: 100px 0;
-        text-align: center;
+        text-align: left;
         h2 {
             margin-bottom: 15px;
             font-size: 3em;
@@ -457,4 +457,15 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: @theme-primary;
+}
+
+@media(min-width: 768px) {
+    .preambleComponent--white p:last-child:after {
+        content:"";
+        width: 10%;
+        border-bottom: 3px solid #b4b50f;
+        padding-bottom: 50px;
+        display: block;
+        margin: 0 auto
+    }
 }

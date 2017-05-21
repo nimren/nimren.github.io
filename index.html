@@ -185,12 +185,151 @@
     </section>
     <section id="career">
         <div class="container">
+            <style>
+            .vacancyListComponent {
+                padding: 50px 0
+            }
+
+            .vacancyListComponent-vacancy {
+                display: block
+            }
+
+            .vacancyListComponent-vacancy:hover,.vacancyListComponent-vacancy:active {
+                text-decoration: none
+            }
+
+            .vacancyListComponent-vacancy:hover .vacancyListComponent-link,.vacancyListComponent-vacancy:active .vacancyListComponent-link {
+                background-color: #1d1d1d;
+                color: #fff
+            }
+
+            .vacancyListComponent-item {
+                text-align: center;
+                border: 1px solid #ececeb;
+                padding: 20px;
+                margin-bottom: 15px
+            }
+
+            @media(min-width: 768px) {
+                .vacancyListComponent-item {
+                    margin-bottom:25px
+                }
+            }
+
+            .vacancyListComponent-header {
+                color: #1d1d1d;
+                margin-bottom: 5px;
+                text-transform: none
+            }
+
+            .vacancyListComponent-city {
+                margin-bottom: 50px;
+                text-transform: uppercase;
+                font-family: Montserrat,sans-serif;
+                font-weight: bold;
+                color: #444
+            }
+.big-b {
+    display: inline-block;
+    padding: 15px 30px;
+    border: 1px solid #1d1d1d;
+    font: 700 14px montserrat,sans-serif;
+    text-transform: uppercase;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    background-color: transparent;
+    border-radius: 0;
+    color: #1d1d1d
+}
+
+.big-b:hover {
+    background-color: #b4b50f;
+    color: #fff;
+    text-decoration: none
+}
+
+.big-b:focus {
+    outline: none;
+    text-decoration: none
+}
+
+.big-b.inverted {
+    border: 1px solid #fff;
+    color: #fff
+}
+
+.big-b.inverted:hover {
+    background-color: #fff;
+    color: #1d1d1d
+}
+
+.big-b.dark {
+    background-color: #1d1d1d;
+    color: #fff
+}
+
+.big-b.dark:hover {
+    background-color: transparent;
+    color: #1d1d1d
+}
+
+.big-b.small {
+    font-size: 13px;
+    padding: 8px 15px;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+.big-b.rounded {
+    font-size: 13px;
+    padding: 8px 15px;
+    border-radius: 50px;
+    margin: 5px
+}
+
+.big-b.rounded.active {
+    background-color: #1d1d1d;
+    color: #fff;
+    text-decoration: none
+}
+
+.big-b.rounded.active:hover,.big-b.rounded.active:active {
+    background-color: #1d1d1d;
+    color: #fff
+}
+
+.big-b.rounded:hover,.big-b.rounded:active {
+    background-color: transparent;
+    color: #1d1d1d
+}
+
+.big-b.rounded:focus {
+    outline: none
+}            
+            </style>
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Karriär</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
-            </div>              
+            </div>
+            <div class="row">
+                <a href="#Job1" class="col-md-4 vacancyListComponent-vacancy" data-toggle="modal">
+                    <div class="vacancyListComponent-item" style="height: 209px;">
+                        <h3 class="vacancyListComponent-header u-textBold20">iOS-utvecklare</h3>
+                        <div class="vacancyListComponent-city">Helsingborg</div>
+                        <div class="vacancyListComponent-link big-b">Läs mer</div>
+                    </div>
+                </a>
+                <a href="#Job2" class="col-md-4 vacancyListComponent-vacancy" data-toggle="modal">
+                    <div class="vacancyListComponent-item" style="height: 209px;">
+                        <h3 class="vacancyListComponent-header u-textBold20">Android-utvecklare</h3>
+                        <div class="vacancyListComponent-city">Stockholm</div>
+                        <div class="vacancyListComponent-link big-b">Läs mer</div>
+                    </div>
+                </a>                     
+            </div>             
         </div>
     </section>
     <section id="contact">
@@ -263,4 +402,93 @@
 
     <script src="js/site.min.js"></script>
 </body>
+    <!-- Career Modal 1 -->
+    <div class="portfolio-modal modal fade" id="Job1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <div class="preambleComponent preambleComponent--white">
+                                    <h1 class="text-center">iOS-utvecklare</h1>
+                                    <p>Uppdragsgivaren utvecklar och driver smarta mobila tjänster som gör tillvaron lite enklare för alla människor. De är ett utvecklingsföretag med mycket höga krav på användarvänlighet och säkerhet och som också är certifierade enligt PCI Level 1.</p>
+                                </div>
+                                <div>
+                                    <h3>OM DIG</h3>
+                                    <p>Vi söker dig som är engagerad, intresserad och entusiastisk vad gäller app-utveckling! Vi tror även att du är nyfiken på konsultbranschen och att du uppskattar en organisation som uppmuntrar till eget ansvar och att du gärna delar med dig av dina kunskaper till kund och kollegor. Dessutom tror vi att du brinner för att&nbsp; jobba med den senaste tekniken och inte är rädd för att ständigt utveckla både dig själv och våra lösningar.</p>
+                                    <h3>DIN ROLL</h3>
+                                    <p>Som app-utvecklare kommer du att arbeta med att utveckla kvalitativa och långsiktiga lösningar i nära samarbete med våra kunder. Du kommer att jobba med större kunder i längre projekt för att få till den absolut bästa lösningen. Tillsammans med kund kommer du att utveckla en applikation som innehåller nytta och långsiktig kvalité.</p>
+                                    <h3><span>DIN KOMPETENS</span></h3>
+                                    <ul>
+                                        <li>Swift</li>
+                                        <li>Objective-C</li>
+                                        <li>CocoaPods</li>
+                                    </ul>
+                                    <p>Generellt behöver du även ha kunskaper inom Git, Continuous Integration (t.ex. Xcode Server, Jenkins och Bamboo).<br> <br> Det är meriterande om du har erfarenhet av Xamarin, React Native eller Ionic/AngularJS, också kunskaper i HTML5, CSS3 och javascript är relevant.<br> <br> Tillträde omgående, eller enligt överenskommelse. Skicka ansökan (personligt brev + CV). Vi läser ansökningar och kallar till intervju löpande.</p>
+                                    <p>Låter det intressant? Välkommen med din ansökan!</p>
+                                    <p>
+                                        <strong>Kontakt</strong><br>           
+                                        <i class="fa fa-envelope-o"></i>&nbsp;<a href="mailto:fredrik@ourkeep.se">fredrik@ourkeep.se</a><a><br>
+                                        <i class="fa fa-phone"></i>&nbsp;</a><a href="tel:+46(0)761390199">+46 (0)761 - 39 01 99</a> <br>
+                                    </p>
+                                </div>
+                                <button type="button" class="big-b" data-dismiss="modal">Stäng</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+       <div class="portfolio-modal modal fade" id="Job2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <div class="preambleComponent preambleComponent--white">
+                                    <h1 class="text-center">Android-utvecklare</h1>
+                                    <p>Uppdragsgivaren är ett globalt företag som erbjuder en Online-musiktjänst där möjlighet ges för att kunna streama musik, podcasts samt videoklipp över internet. Tjänsten har idag över 100 miljoner användare världen över.</p>
+                                </div>
+                                <div>
+                                    <h3>OM DIG</h3>
+                                    <p>Vi söker dig som är engagerad, intresserad och entusiastisk vad gäller app-utveckling! Vi tror även att du är nyfiken på konsultbranschen och att du uppskattar en organisation som uppmuntrar till eget ansvar och att du gärna delar med dig av dina kunskaper till kund och kollegor. Dessutom tror vi att du brinner för att&nbsp; jobba med den senaste tekniken och inte är rädd för att ständigt utveckla både dig själv och våra lösningar.</p>
+                                    <h3>DIN ROLL</h3>
+                                    <p>Som app-utvecklare kommer du att arbeta med att utveckla kvalitativa och långsiktiga lösningar i nära samarbete med våra kunder. Du kommer att jobba med större kunder i längre projekt för att få till den absolut bästa lösningen. Tillsammans med kund kommer du att utveckla en applikation som innehåller nytta och långsiktig kvalité.</p>
+                                    <h3><span>DIN KOMPETENS</span></h3>
+                                    <ul>
+                                        <li>Xcode</li>
+                                        <li>JavaScript</li>
+                                        <li>Android Studio</li>
+                                    </ul>
+                                    <p>Generellt behöver du även ha kunskaper inom Git, Continuous Integration (t.ex. Xcode Server, Jenkins och Bamboo).<br> <br> Det är meriterande om du har erfarenhet av Xamarin, React Native eller Ionic/AngularJS, också kunskaper i HTML5, CSS3 och javascript är relevant.<br> <br> Tillträde omgående, eller enligt överenskommelse. Skicka ansökan (personligt brev + CV). Vi läser ansökningar och kallar till intervju löpande.</p>
+                                    <p>Låter det intressant? Välkommen med din ansökan!</p>
+                                    <p>
+                                        <strong>Kontakt</strong><br>           
+                                        <i class="fa fa-envelope-o"></i>&nbsp;<a href="mailto:fredrik@ourkeep.se">fredrik@ourkeep.se</a><a><br>
+                                        <i class="fa fa-phone"></i>&nbsp;</a><a href="tel:+46(0)761390199">+46 (0)761 - 39 01 99</a> <br>
+                                    </p>                                    
+                                </div>
+                                <button type="button" class="big-b" data-dismiss="modal">Stäng</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
 </html>
