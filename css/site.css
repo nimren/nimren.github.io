@@ -31,8 +31,6 @@ a {
   color: #b4b50f;
 }
 a:hover,
-a:focus,
-a:active,
 a.active {
   color: #85860b;
 }
@@ -344,6 +342,62 @@ section h3.section-subheading {
 .team-member p {
   margin-top: 0;
 }
+.career:hover,
+.career:focus,
+.career:active {
+  text-decoration: none;
+}
+.career-item {
+  display: block;
+  text-align: center;
+  border: 1px solid #2d2d2d;
+  padding: 20px;
+  margin: 0 10px 15px;
+}
+.career-item:hover,
+.career-item:focus,
+.career-item:active {
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  .career .careerComponent-item {
+    margin-bottom: 25px;
+  }
+}
+.career-header {
+  color: #1d1d1d;
+  margin-bottom: 5px;
+  text-transform: none;
+}
+.career-city {
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+  color: #444;
+}
+.career-btn {
+  display: inline-block;
+  padding: 15px 30px;
+  border: 1px solid #1d1d1d;
+  font: 700 14px montserrat, sans-serif;
+  text-transform: uppercase;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+  background-color: #2d2d2d;
+  border-radius: 0;
+  color: #fff;
+}
+.career-btn:hover {
+  background-color: #b4b50f;
+  color: #fff;
+  text-decoration: none;
+}
+.career-btn-btn:focus {
+  outline: none;
+  text-decoration: none;
+}
 section#contact {
   background-color: #2d2d2d;
   color: white;
@@ -364,6 +418,18 @@ footer ul.quicklinks {
   text-transform: uppercase;
   text-transform: none;
 }
+footer .social {
+  padding-top: 15px;
+}
+footer .social a {
+  font-size: 30px;
+  margin-right: 15px;
+  color: #2d2d2d;
+  text-decoration: none;
+}
+footer .social a:hover {
+  color: #b4b50f;
+}
 ul.social-buttons {
   margin-bottom: 0;
 }
@@ -382,8 +448,7 @@ ul.social-buttons li a {
   transition: all 0.3s;
 }
 ul.social-buttons li a:hover,
-ul.social-buttons li a:focus,
-ul.social-buttons li a:active {
+ul.social-buttons li a:focus {
   background-color: #b4b50f;
 }
 .btn:focus,
