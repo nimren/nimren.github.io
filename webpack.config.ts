@@ -1,12 +1,47 @@
 
 import * as path from 'path';
-import {Configuration, ProvidePlugin, optimize} from 'webpack';
+import {Configuration, ProvidePlugin, LoaderOptionsPlugin, DefinePlugin, optimize} from 'webpack';
 import * as ExtractTextPlugin  from 'extract-text-webpack-plugin';
+import * as HtmlWebpackPlugin from 'html-webpack-plugin';
 
 const extractLess = new ExtractTextPlugin({
     filename: "[name].[contenthash].css",
     disable: process.env.NODE_ENV === "development"
 });
+
+const loaderOptions = {
+  mozjpeg: {
+    quality: 65
+  },
+  pngquant:{
+    quality: "65-90",
+    speed: 4
+  },
+  svgo:{
+    plugins: [
+      {
+        removeViewBox: false
+      },
+      {
+        removeEmptyAttrs: false
+      }
+    ]
+  },
+  gifsicle: {
+    optimizationLevel: 7,
+    interlaced: false
+  },
+  optipng: {
+    optimizationLevel: 7,
+    interlaced: false
+  }
+};
+
+const fileLoaderOptions = {
+  hash: 'sha512',
+  digest: 'hex',
+  name: '[hash].[ext]'
+}
 
 const config: Configuration = {
 
@@ -20,7 +55,7 @@ const config: Configuration = {
   },
   output: {
       path: path.resolve(__dirname, 'dist'),
-      publicPath: '/',
+      publicPath: '/dist/',
       filename: '[name].[chunkhash].js'
   },
   devtool: 'source-map',
@@ -41,6 +76,19 @@ const config: Configuration = {
             // use style-loader in development
             fallback: "style-loader"
         })
+      },
+      {
+        test: /.*\.(gif|png|jpe?g|svg)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: fileLoaderOptions
+          },
+          {
+            loader: 'image-webpack-loader',
+            options: loaderOptions
+          }
+        ]
       }
     ]
   },
@@ -53,7 +101,45 @@ const config: Configuration = {
       new optimize.CommonsChunkPlugin({
         name: "vendor",
         minChunks: Infinity
-      })
+      }),
+      new HtmlWebpackPlugin({
+        title: 'Keep Consulting',
+        template: 'src/index.html',
+        filename: 'index.html',
+        inject: true,
+        chunksSortMode: 'dependency',
+        minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeRedundantAttributes: true,
+        useShortDoctype: true,
+        removeEmptyAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        keepClosingSlash: true,
+        minifyJS: true,
+        minifyCSS: true,
+        minifyURLs: true,
+      }
+    }),
+    new DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production')
+    })
+    ,
+    new LoaderOptionsPlugin({
+      minimize: true,
+      debug: false
+    }),
+    new optimize.UglifyJsPlugin({
+      beautify: false,
+      mangle: {
+        screw_ie8: true,
+        keep_fnames: true
+      },
+      compress: {
+        screw_ie8: true
+      },
+      comments: false
+    })
   ]
 };
 

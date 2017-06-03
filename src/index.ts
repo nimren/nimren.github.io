@@ -1,16 +1,14 @@
-import * as $ from 'jquery';
+import '../less/site.less';
 
-
-(() => {
-    "use strict"; // Start of use strict
-
+$(() => {
+    console.log('loaded!');
     // jQuery for page scrolling feature - requires jQuery Easing plugin
-    $('a.page-scroll').on('click', function(event) {
-        var $anchor = $(this);
+    $('a.page-scroll').on('click', (e: JQueryEventObject) => {
+        var $anchor = $(e.currentTarget);
         $('html, body').stop().animate({
             scrollTop: ($($anchor.attr('href')).offset().top - 50)
         }, 1250, 'easeInOutExpo');
-        event.preventDefault();
+        e.preventDefault();
     });
 
     // Highlight the top nav as scrolling occurs
@@ -20,8 +18,8 @@ import * as $ from 'jquery';
     });
 
     // Closes the Responsive Menu on Menu Item Click
-    $('.navbar-collapse ul li a').on('click',function(){ 
-            $('.navbar-toggle:visible').click();
+    $('.navbar-collapse ul li a').on('click', (e: JQueryEventObject) => { 
+        $('.navbar-toggle:visible').click();
     });
 
     // Offset for Main Navigation
@@ -31,4 +29,4 @@ import * as $ from 'jquery';
         }
     })
 
-})
+});
