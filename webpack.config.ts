@@ -103,7 +103,6 @@ const config: Configuration = {
         minChunks: Infinity
       }),
       new HtmlWebpackPlugin({
-        title: 'Keep Consulting',
         template: 'src/index.html',
         filename: 'index.html',
         inject: true,
@@ -131,6 +130,7 @@ const config: Configuration = {
     }),
     new optimize.UglifyJsPlugin({
       beautify: false,
+      sourceMap: true,
       mangle: {
         screw_ie8: true,
         keep_fnames: true
